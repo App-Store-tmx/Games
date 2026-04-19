@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=15 Puzzle
-Exec=/data/data/com.termux/files/usr/bin/15Puzzle-launch
-Icon=/data/data/com.termux/files/home/15Puzzle/icon.png
-Type=Application
-Categories=Game;
-Terminal=false

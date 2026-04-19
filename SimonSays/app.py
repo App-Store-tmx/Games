@@ -1,47 +1,86 @@
 import customtkinter as ctk
 import random
-from tkinter import messagebox
 import tkinter as tk
+from tkinter import messagebox
 
 class SimonSays(ctk.CTk):
     def __init__(self):
         super().__init__()
 
-        self.title("Simon Says")
+        self.title("Simon Says: Glow Edition")
+        self.geometry("500x700")
+        ctk.set_appearance_mode("dark")
+        
         try:
             self.icon_img = tk.PhotoImage(file="icon.png")
             self.iconphoto(False, self.icon_img)
         except Exception:
-            # Fallback if icon.png is missing or loading fails
             pass
-        self.geometry("400x500")
-        ctk.set_appearance_mode("dark")
 
-        self.colors = ["red", "green", "blue", "yellow"]
+        self.color_data = {
+            "green":  {"base": "#2E7D32", "glow": "#66BB6A"},
+            "red":    {"base": "#C62828", "glow": "#EF5350"},
+            "yellow": {"base": "#FBC02D", "glow": "#FFF176"},
+            "blue":   {"base": "#1565C0", "glow": "#42A5F5"},
+            "orange": {"base": "#EF6C00", "glow": "#FFB74D"},
+            "purple": {"base": "#6A1B9A", "glow": "#BA68C8"}
+        }
+
         self.sequence = []
         self.user_sequence = []
         self.can_click = False
+        self.difficulty = "Easy"
 
-        self.label = ctk.CTkLabel(self, text="Simon Says", font=("Arial", 24))
-        self.label.pack(pady=20)
+        # UI Layout
+        self.title_label = ctk.CTkLabel(self, text="Simon Says", font=("Arial", 28, "bold"))
+        self.title_label.pack(pady=20)
+
+        self.mode_frame = ctk.CTkFrame(self, fg_color="transparent")
+        self.mode_frame.pack(pady=10)
+
+        self.mode_var = ctk.StringVar(value="Easy")
+        self.easy_rb = ctk.CTkRadioButton(self.mode_frame, text="Easy", variable=self.mode_var, value="Easy", command=self.change_difficulty)
+        self.easy_rb.grid(row=0, column=0, padx=10)
+        self.hard_rb = ctk.CTkRadioButton(self.mode_frame, text="Hard", variable=self.mode_var, value="Hard", command=self.change_difficulty)
+        self.hard_rb.grid(row=0, column=1, padx=10)
+
+        self.score_label = ctk.CTkLabel(self, text="Round: 0", font=("Arial", 18))
+        self.score_label.pack(pady=10)
 
         self.grid_frame = ctk.CTkFrame(self)
         self.grid_frame.pack(padx=20, pady=10)
 
         self.buttons = {}
-        for color in self.colors:
-            btn = ctk.CTkButton(self.grid_frame, text="", width=150, height=150, 
-                                fg_color=color, hover_color=color,
-                                command=lambda c=color: self.user_click(c))
-            self.buttons[color] = btn
-            
-        self.buttons["green"].grid(row=0, column=0, padx=5, pady=5)
-        self.buttons["red"].grid(row=0, column=1, padx=5, pady=5)
-        self.buttons["yellow"].grid(row=1, column=0, padx=5, pady=5)
-        self.buttons["blue"].grid(row=1, column=1, padx=5, pady=5)
+        self.setup_buttons()
 
-        self.start_btn = ctk.CTkButton(self, text="Start Game", command=self.start_game)
-        self.start_btn.pack(pady=20)
+        self.start_btn = ctk.CTkButton(self, text="Start Game", font=("Arial", 16), command=self.start_game)
+        self.start_btn.pack(pady=30)
+
+    def setup_buttons(self):
+        for btn in self.buttons.values():
+            btn.destroy()
+        self.buttons = {}
+
+        cols = 2
+        active_colors = ["green", "red", "yellow", "blue"]
+        if self.difficulty == "Hard":
+            active_colors += ["orange", "purple"]
+            cols = 3
+
+        for i, color in enumerate(active_colors):
+            btn = ctk.CTkButton(self.grid_frame, text="", width=120, height=120, 
+                                corner_radius=15,
+                                fg_color=self.color_data[color]["base"],
+                                hover_color=self.color_data[color]["glow"],
+                                command=lambda c=color: self.user_click(c))
+            btn.grid(row=i//cols, column=i%cols, padx=10, pady=10)
+            self.buttons[color] = btn
+
+    def change_difficulty(self):
+        self.difficulty = self.mode_var.get()
+        self.setup_buttons()
+        self.sequence = []
+        self.score_label.configure(text="Round: 0")
 
     def start_game(self):
         self.sequence = []
@@ -49,20 +88,26 @@ class SimonSays(ctk.CTk):
 
     def next_round(self):
         self.user_sequence = []
-        self.sequence.append(random.choice(self.colors))
+        active_colors = list(self.buttons.keys())
+        self.sequence.append(random.choice(active_colors))
+        self.score_label.configure(text=f"Round: {len(self.sequence)}")
         self.can_click = False
-        self.label.configure(text=f"Round {len(self.sequence)}")
         self.after(1000, self.play_sequence)
 
     def play_sequence(self):
+        speed = 600 if self.difficulty == "Easy" else 350
         for i, color in enumerate(self.sequence):
-            self.after(i * 600, lambda c=color: self.flash_button(c))
-        self.after(len(self.sequence) * 600, self.enable_clicks)
+            self.after(i * speed, lambda c=color: self.flash_button(c))
+        
+        self.after(len(self.sequence) * speed, self.enable_clicks)
 
     def flash_button(self, color):
-        original_color = self.buttons[color].cget("fg_color")
-        self.buttons[color].configure(fg_color="white")
-        self.after(300, lambda: self.buttons[color].configure(fg_color=original_color))
+        if color not in self.buttons: return
+        btn = self.buttons[color]
+        btn.configure(fg_color=self.color_data[color]["glow"])
+        # Use a shorter duration for the "glow"
+        duration = 300 if self.difficulty == "Easy" else 150
+        self.after(duration, lambda: btn.configure(fg_color=self.color_data[color]["base"]))
 
     def enable_clicks(self):
         self.can_click = True
@@ -74,15 +119,16 @@ class SimonSays(ctk.CTk):
         self.flash_button(color)
         self.user_sequence.append(color)
 
-        if self.user_sequence[len(self.user_sequence)-1] != self.sequence[len(self.user_sequence)-1]:
-            messagebox.showinfo("Game Over", f"Wrong! Your score: {len(self.sequence)-1}")
+        # Check correctness
+        idx = len(self.user_sequence) - 1
+        if self.user_sequence[idx] != self.sequence[idx]:
+            messagebox.showinfo("Game Over", f"Wrong sequence! Your score: {len(self.sequence)-1}")
             self.can_click = False
-            self.label.configure(text="Simon Says")
             return
 
         if len(self.user_sequence) == len(self.sequence):
             self.can_click = False
-            self.after(1000, self.next_round)
+            self.after(800, self.next_round)
 
 if __name__ == "__main__":
     app = SimonSays()
