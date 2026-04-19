@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=MemoryMatch
+Comment=Play Memory Match
+Exec=MemoryMatch-launch
+Icon=applications-games
+Categories=Game;
+Terminal=false

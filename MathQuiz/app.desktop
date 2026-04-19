@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Math Quiz
+Exec=/data/data/com.termux/files/usr/bin/MathQuiz-launch
+Icon=accessories-calculator
+Type=Application
+Categories=Game;
+Terminal=false

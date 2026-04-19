@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=TicTacToe
+Comment=Play Tic Tac Toe
+Exec=TicTacToe-launch
+Icon=applications-games
+Categories=Game;
+Terminal=false

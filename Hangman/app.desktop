@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Hangman
+Comment=Play Hangman
+Exec=Hangman-launch
+Icon=applications-games
+Categories=Game;
+Terminal=false

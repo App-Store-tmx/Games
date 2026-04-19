@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Snake
+Comment=Classic Snake game
+Exec=Snake-launch
+Icon=applications-games
+Categories=Game;
+Terminal=false

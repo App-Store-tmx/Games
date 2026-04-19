@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=ReactionTime
+Comment=Test your reaction time
+Exec=ReactionTime-launch
+Icon=applications-games
+Categories=Game;
+Terminal=false

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=GuessTheNumber
+Comment=Guess the number game
+Exec=GuessTheNumber-launch
+Icon=applications-games
+Categories=Game;
+Terminal=false

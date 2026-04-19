@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=ColorPickerGame
+Comment=Guess the hex color code
+Exec=ColorPickerGame-launch
+Icon=applications-games
+Categories=Game;
+Terminal=false

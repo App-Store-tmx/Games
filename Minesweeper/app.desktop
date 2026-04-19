@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Minesweeper
+Comment=Play Minesweeper
+Exec=Minesweeper-launch
+Icon=applications-games
+Categories=Game;
+Terminal=false

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=SimonSays
+Comment=Play Simon Says
+Exec=SimonSays-launch
+Icon=applications-games
+Categories=Game;
+Terminal=false

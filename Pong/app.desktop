@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Pong
+Comment=Play Pong
+Exec=Pong-launch
+Icon=applications-games
+Categories=Game;
+Terminal=false

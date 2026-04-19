@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Connect Four
+Exec=/data/data/com.termux/files/usr/bin/ConnectFour-launch
+Icon=games-multimedia
+Type=Application
+Categories=Game;
+Terminal=false

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Typing Test
+Exec=/data/data/com.termux/files/usr/bin/TypingTest-launch
+Icon=utilities-terminal
+Type=Application
+Categories=Game;
+Terminal=false
