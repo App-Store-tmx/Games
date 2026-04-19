@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Whack-A-Mole
 Exec=/data/data/com.termux/files/usr/bin/WhackAMole-launch
-Icon=games-multimedia
+Icon=/data/data/com.termux/files/home/WhackAMole/icon.png
 Type=Application
 Categories=Game;
 Terminal=false

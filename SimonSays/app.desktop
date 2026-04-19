@@ -4,6 +4,6 @@ Type=Application
 Name=SimonSays
 Comment=Play Simon Says
 Exec=SimonSays-launch
-Icon=applications-games
+Icon=/data/data/com.termux/files/home/SimonSays/icon.png
 Categories=Game;
 Terminal=false

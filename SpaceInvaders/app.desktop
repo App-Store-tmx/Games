@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Space Invaders
 Exec=/data/data/com.termux/files/usr/bin/SpaceInvaders-launch
-Icon=games-multimedia
+Icon=/data/data/com.termux/files/home/SpaceInvaders/icon.png
 Type=Application
 Categories=Game;
 Terminal=false

@@ -4,6 +4,6 @@ Type=Application
 Name=GuessTheNumber
 Comment=Guess the number game
 Exec=GuessTheNumber-launch
-Icon=applications-games
+Icon=/data/data/com.termux/files/home/GuessTheNumber/icon.png
 Categories=Game;
 Terminal=false

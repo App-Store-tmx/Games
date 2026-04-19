@@ -4,6 +4,6 @@ Type=Application
 Name=Pong
 Comment=Play Pong
 Exec=Pong-launch
-Icon=applications-games
+Icon=/data/data/com.termux/files/home/Pong/icon.png
 Categories=Game;
 Terminal=false

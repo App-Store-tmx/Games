@@ -6,6 +6,7 @@ pip install customtkinter
 # Create app directory and move files
 mkdir -p ~/MathQuiz
 cp app.py ~/MathQuiz/app.py
+cp icon.png ~/MathQuiz/
 
 # Create launch wrapper
 cat <<EOF > /data/data/com.termux/files/usr/bin/MathQuiz-launch

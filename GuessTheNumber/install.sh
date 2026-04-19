@@ -8,6 +8,7 @@ pip install customtkinter
 
 mkdir -p ~/GuessTheNumber
 cp app.py ~/GuessTheNumber/
+cp icon.png ~/GuessTheNumber/
 
 cp launch.sh /data/data/com.termux/files/usr/bin/GuessTheNumber-launch
 chmod +x /data/data/com.termux/files/usr/bin/GuessTheNumber-launch

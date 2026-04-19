@@ -9,6 +9,12 @@ class ConnectFourApp(ctk.CTk):
         super().__init__()
 
         self.title("Connect Four")
+        try:
+            self.icon_img = tk.PhotoImage(file="icon.png")
+            self.iconphoto(False, self.icon_img)
+        except Exception:
+            # Fallback if icon.png is missing or loading fails
+            pass
         self.geometry("600x650")
         self.resizable(False, False)
 

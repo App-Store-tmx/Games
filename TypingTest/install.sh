@@ -6,6 +6,7 @@ pip install customtkinter
 # Create app directory and move files
 mkdir -p ~/TypingTest
 cp app.py ~/TypingTest/app.py
+cp icon.png ~/TypingTest/
 
 # Create launch wrapper
 cat <<EOF > /data/data/com.termux/files/usr/bin/TypingTest-launch

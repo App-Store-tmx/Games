@@ -6,6 +6,7 @@ pip install customtkinter
 # Create app directory and move files
 mkdir -p ~/15Puzzle
 cp app.py ~/15Puzzle/app.py
+cp icon.png ~/15Puzzle/
 
 # Create launch wrapper
 cat <<EOF > /data/data/com.termux/files/usr/bin/15Puzzle-launch

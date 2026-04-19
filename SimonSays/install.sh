@@ -8,6 +8,7 @@ pip install customtkinter
 
 mkdir -p ~/SimonSays
 cp app.py ~/SimonSays/
+cp icon.png ~/SimonSays/
 
 cp launch.sh /data/data/com.termux/files/usr/bin/SimonSays-launch
 chmod +x /data/data/com.termux/files/usr/bin/SimonSays-launch

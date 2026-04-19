@@ -4,6 +4,6 @@ Type=Application
 Name=ReactionTime
 Comment=Test your reaction time
 Exec=ReactionTime-launch
-Icon=applications-games
+Icon=/data/data/com.termux/files/home/ReactionTime/icon.png
 Categories=Game;
 Terminal=false

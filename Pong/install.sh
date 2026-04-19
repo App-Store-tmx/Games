@@ -8,6 +8,7 @@ pip install customtkinter
 
 mkdir -p ~/Pong
 cp app.py ~/Pong/
+cp icon.png ~/Pong/
 
 cp launch.sh /data/data/com.termux/files/usr/bin/Pong-launch
 chmod +x /data/data/com.termux/files/usr/bin/Pong-launch

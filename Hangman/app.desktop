@@ -4,6 +4,6 @@ Type=Application
 Name=Hangman
 Comment=Play Hangman
 Exec=Hangman-launch
-Icon=applications-games
+Icon=/data/data/com.termux/files/home/Hangman/icon.png
 Categories=Game;
 Terminal=false

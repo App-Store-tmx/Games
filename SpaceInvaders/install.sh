@@ -6,6 +6,7 @@ pip install customtkinter
 # Create app directory and move files
 mkdir -p ~/SpaceInvaders
 cp app.py ~/SpaceInvaders/app.py
+cp icon.png ~/SpaceInvaders/
 
 # Create launch wrapper
 cat <<EOF > /data/data/com.termux/files/usr/bin/SpaceInvaders-launch

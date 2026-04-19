@@ -4,6 +4,6 @@ Type=Application
 Name=2048
 Comment=Play 2048
 Exec=2048-launch
-Icon=applications-games
+Icon=/data/data/com.termux/files/home/2048/icon.png
 Categories=Game;
 Terminal=false

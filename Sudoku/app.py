@@ -10,6 +10,12 @@ class SudokuApp(ctk.CTk):
         super().__init__()
 
         self.title("Sudoku")
+        try:
+            self.icon_img = tk.PhotoImage(file="icon.png")
+            self.iconphoto(False, self.icon_img)
+        except Exception:
+            # Fallback if icon.png is missing or loading fails
+            pass
         self.geometry("600x700")
         self.resizable(False, False)
 

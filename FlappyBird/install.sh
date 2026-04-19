@@ -6,6 +6,7 @@ pip install customtkinter
 # Create app directory and move files
 mkdir -p ~/FlappyBird
 cp app.py ~/FlappyBird/app.py
+cp icon.png ~/FlappyBird/
 
 # Create launch wrapper
 cat <<EOF > /data/data/com.termux/files/usr/bin/FlappyBird-launch

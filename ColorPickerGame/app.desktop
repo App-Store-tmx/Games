@@ -4,6 +4,6 @@ Type=Application
 Name=ColorPickerGame
 Comment=Guess the hex color code
 Exec=ColorPickerGame-launch
-Icon=applications-games
+Icon=/data/data/com.termux/files/home/ColorPickerGame/icon.png
 Categories=Game;
 Terminal=false

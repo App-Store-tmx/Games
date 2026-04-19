@@ -4,6 +4,6 @@ Type=Application
 Name=RockPaperScissors
 Comment=Rock Paper Scissors game
 Exec=RockPaperScissors-launch
-Icon=applications-games
+Icon=/data/data/com.termux/files/home/RockPaperScissors/icon.png
 Categories=Game;
 Terminal=false

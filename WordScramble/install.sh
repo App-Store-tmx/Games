@@ -6,6 +6,7 @@ pip install customtkinter
 # Create app directory and move files
 mkdir -p ~/WordScramble
 cp app.py ~/WordScramble/app.py
+cp icon.png ~/WordScramble/
 
 # Create launch wrapper
 cat <<EOF > /data/data/com.termux/files/usr/bin/WordScramble-launch

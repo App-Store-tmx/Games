@@ -1,5 +1,6 @@
 import customtkinter as ctk
 import random
+import tkinter as tk
 
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("blue")
@@ -9,6 +10,12 @@ class WordScrambleApp(ctk.CTk):
         super().__init__()
 
         self.title("Word Scramble")
+        try:
+            self.icon_img = tk.PhotoImage(file="icon.png")
+            self.iconphoto(False, self.icon_img)
+        except Exception:
+            # Fallback if icon.png is missing or loading fails
+            pass
         self.geometry("400x400")
 
         self.words = ["PYTHON", "TERMUX", "LINUX", "ANDROID", "GAME", "CODE", "PROGRAM", "WIDGET", "MOBILE", "DESKTOP"]

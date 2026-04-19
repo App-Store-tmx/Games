@@ -14,6 +14,7 @@ mkdir -p ~/Hangman
 
 # Copy application files
 cp app.py ~/Hangman/
+cp icon.png ~/Hangman/
 
 # Install launch script to /usr/bin/
 cp launch.sh /data/data/com.termux/files/usr/bin/Hangman-launch

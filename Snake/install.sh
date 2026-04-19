@@ -8,6 +8,7 @@ pip install customtkinter
 
 mkdir -p ~/Snake
 cp app.py ~/Snake/
+cp icon.png ~/Snake/
 
 cp launch.sh /data/data/com.termux/files/usr/bin/Snake-launch
 chmod +x /data/data/com.termux/files/usr/bin/Snake-launch

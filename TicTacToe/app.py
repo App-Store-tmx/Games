@@ -1,11 +1,18 @@
 import customtkinter as ctk
 from tkinter import messagebox
+import tkinter as tk
 
 class TicTacToe(ctk.CTk):
     def __init__(self):
         super().__init__()
 
         self.title("Tic Tac Toe")
+        try:
+            self.icon_img = tk.PhotoImage(file="icon.png")
+            self.iconphoto(False, self.icon_img)
+        except Exception:
+            # Fallback if icon.png is missing or loading fails
+            pass
         self.geometry("400x450")
         ctk.set_appearance_mode("dark")
         ctk.set_default_color_theme("blue")

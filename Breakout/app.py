@@ -8,6 +8,12 @@ class BreakoutApp(ctk.CTk):
         super().__init__()
 
         self.title("Breakout")
+        try:
+            self.icon_img = tk.PhotoImage(file="icon.png")
+            self.iconphoto(False, self.icon_img)
+        except Exception:
+            # Fallback if icon.png is missing or loading fails
+            pass
         self.geometry("600x400")
         self.resizable(False, False)
 

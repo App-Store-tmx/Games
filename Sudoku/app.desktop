@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Sudoku
 Exec=/data/data/com.termux/files/usr/bin/Sudoku-launch
-Icon=games-multimedia
+Icon=/data/data/com.termux/files/home/Sudoku/icon.png
 Type=Application
 Categories=Game;
 Terminal=false

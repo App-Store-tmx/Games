@@ -8,6 +8,7 @@ pip install customtkinter
 
 mkdir -p ~/RockPaperScissors
 cp app.py ~/RockPaperScissors/
+cp icon.png ~/RockPaperScissors/
 
 cp launch.sh /data/data/com.termux/files/usr/bin/RockPaperScissors-launch
 chmod +x /data/data/com.termux/files/usr/bin/RockPaperScissors-launch

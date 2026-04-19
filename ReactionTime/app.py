@@ -1,12 +1,19 @@
 import customtkinter as ctk
 import time
 import random
+import tkinter as tk
 
 class ReactionTime(ctk.CTk):
     def __init__(self):
         super().__init__()
 
         self.title("Reaction Time Test")
+        try:
+            self.icon_img = tk.PhotoImage(file="icon.png")
+            self.iconphoto(False, self.icon_img)
+        except Exception:
+            # Fallback if icon.png is missing or loading fails
+            pass
         self.geometry("400x400")
         ctk.set_appearance_mode("dark")
 

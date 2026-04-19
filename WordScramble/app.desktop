@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Word Scramble
 Exec=/data/data/com.termux/files/usr/bin/WordScramble-launch
-Icon=accessories-text-editor
+Icon=/data/data/com.termux/files/home/WordScramble/icon.png
 Type=Application
 Categories=Game;
 Terminal=false

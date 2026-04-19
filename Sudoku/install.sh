@@ -6,6 +6,7 @@ pip install customtkinter
 # Create app directory and move files
 mkdir -p ~/Sudoku
 cp app.py ~/Sudoku/app.py
+cp icon.png ~/Sudoku/
 
 # Create launch wrapper
 cat <<EOF > /data/data/com.termux/files/usr/bin/Sudoku-launch

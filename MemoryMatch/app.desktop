@@ -4,6 +4,6 @@ Type=Application
 Name=MemoryMatch
 Comment=Play Memory Match
 Exec=MemoryMatch-launch
-Icon=applications-games
+Icon=/data/data/com.termux/files/home/MemoryMatch/icon.png
 Categories=Game;
 Terminal=false

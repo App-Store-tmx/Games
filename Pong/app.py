@@ -7,6 +7,12 @@ class Pong(ctk.CTk):
         super().__init__()
 
         self.title("Pong")
+        try:
+            self.icon_img = tk.PhotoImage(file="icon.png")
+            self.iconphoto(False, self.icon_img)
+        except Exception:
+            # Fallback if icon.png is missing or loading fails
+            pass
         self.geometry("600x450")
         ctk.set_appearance_mode("dark")
 

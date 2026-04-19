@@ -6,6 +6,7 @@ pip install customtkinter
 # Create app directory and move files
 mkdir -p ~/WhackAMole
 cp app.py ~/WhackAMole/app.py
+cp icon.png ~/WhackAMole/
 
 # Create launch wrapper
 cat <<EOF > /data/data/com.termux/files/usr/bin/WhackAMole-launch

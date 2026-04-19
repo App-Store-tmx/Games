@@ -1,6 +1,7 @@
 import customtkinter as ctk
 import time
 import random
+import tkinter as tk
 
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("blue")
@@ -10,6 +11,12 @@ class TypingTestApp(ctk.CTk):
         super().__init__()
 
         self.title("Typing Test")
+        try:
+            self.icon_img = tk.PhotoImage(file="icon.png")
+            self.iconphoto(False, self.icon_img)
+        except Exception:
+            # Fallback if icon.png is missing or loading fails
+            pass
         self.geometry("600x400")
 
         self.sentences = [

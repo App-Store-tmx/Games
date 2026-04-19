@@ -7,6 +7,7 @@ pip install customtkinter
 
 mkdir -p ~/ReactionTime
 cp app.py ~/ReactionTime/
+cp icon.png ~/ReactionTime/
 
 cp launch.sh /data/data/com.termux/files/usr/bin/ReactionTime-launch
 chmod +x /data/data/com.termux/files/usr/bin/ReactionTime-launch

@@ -1,11 +1,18 @@
 import customtkinter as ctk
 import random
+import tkinter as tk
 
 class ColorPickerGame(ctk.CTk):
     def __init__(self):
         super().__init__()
 
         self.title("Color Picker Game")
+        try:
+            self.icon_img = tk.PhotoImage(file="icon.png")
+            self.iconphoto(False, self.icon_img)
+        except Exception:
+            # Fallback if icon.png is missing or loading fails
+            pass
         self.geometry("500x400")
         ctk.set_appearance_mode("dark")
 

@@ -2,12 +2,19 @@ import customtkinter as ctk
 import random
 import time
 from tkinter import messagebox
+import tkinter as tk
 
 class MemoryMatch(ctk.CTk):
     def __init__(self):
         super().__init__()
 
         self.title("Memory Match")
+        try:
+            self.icon_img = tk.PhotoImage(file="icon.png")
+            self.iconphoto(False, self.icon_img)
+        except Exception:
+            # Fallback if icon.png is missing or loading fails
+            pass
         self.geometry("500x600")
         ctk.set_appearance_mode("dark")
 

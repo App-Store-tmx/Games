@@ -14,6 +14,7 @@ mkdir -p ~/TicTacToe
 
 # Copy application files
 cp app.py ~/TicTacToe/
+cp icon.png ~/TicTacToe/
 
 # Install launch script to /usr/bin/
 cp launch.sh /data/data/com.termux/files/usr/bin/TicTacToe-launch

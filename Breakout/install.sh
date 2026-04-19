@@ -6,6 +6,7 @@ pip install customtkinter
 # Create app directory and move files
 mkdir -p ~/Breakout
 cp app.py ~/Breakout/app.py
+cp icon.png ~/Breakout/
 
 # Create launch wrapper
 cat <<EOF > /data/data/com.termux/files/usr/bin/Breakout-launch

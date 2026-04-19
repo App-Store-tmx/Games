@@ -4,6 +4,6 @@ Type=Application
 Name=Snake
 Comment=Classic Snake game
 Exec=Snake-launch
-Icon=applications-games
+Icon=/data/data/com.termux/files/home/Snake/icon.png
 Categories=Game;
 Terminal=false

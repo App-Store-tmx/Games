@@ -7,6 +7,7 @@ pip install customtkinter
 
 mkdir -p ~/ColorPickerGame
 cp app.py ~/ColorPickerGame/
+cp icon.png ~/ColorPickerGame/
 
 cp launch.sh /data/data/com.termux/files/usr/bin/ColorPickerGame-launch
 chmod +x /data/data/com.termux/files/usr/bin/ColorPickerGame-launch

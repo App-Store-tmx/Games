@@ -4,6 +4,6 @@ Type=Application
 Name=Minesweeper
 Comment=Play Minesweeper
 Exec=Minesweeper-launch
-Icon=applications-games
+Icon=/data/data/com.termux/files/home/Minesweeper/icon.png
 Categories=Game;
 Terminal=false

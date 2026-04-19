@@ -1,12 +1,19 @@
 import customtkinter as ctk
 import random
 from tkinter import messagebox
+import tkinter as tk
 
 class Minesweeper(ctk.CTk):
     def __init__(self):
         super().__init__()
 
         self.title("Minesweeper")
+        try:
+            self.icon_img = tk.PhotoImage(file="icon.png")
+            self.iconphoto(False, self.icon_img)
+        except Exception:
+            # Fallback if icon.png is missing or loading fails
+            pass
         self.geometry("500x600")
         ctk.set_appearance_mode("dark")
 

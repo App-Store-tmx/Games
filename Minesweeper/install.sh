@@ -8,6 +8,7 @@ pip install customtkinter
 
 mkdir -p ~/Minesweeper
 cp app.py ~/Minesweeper/
+cp icon.png ~/Minesweeper/
 
 cp launch.sh /data/data/com.termux/files/usr/bin/Minesweeper-launch
 chmod +x /data/data/com.termux/files/usr/bin/Minesweeper-launch

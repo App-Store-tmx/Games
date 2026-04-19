@@ -8,6 +8,7 @@ pip install customtkinter
 
 mkdir -p ~/MemoryMatch
 cp app.py ~/MemoryMatch/
+cp icon.png ~/MemoryMatch/
 
 cp launch.sh /data/data/com.termux/files/usr/bin/MemoryMatch-launch
 chmod +x /data/data/com.termux/files/usr/bin/MemoryMatch-launch

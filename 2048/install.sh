@@ -8,6 +8,7 @@ pip install customtkinter
 
 mkdir -p ~/2048
 cp app.py ~/2048/
+cp icon.png ~/2048/
 
 cp launch.sh /data/data/com.termux/files/usr/bin/2048-launch
 chmod +x /data/data/com.termux/files/usr/bin/2048-launch
