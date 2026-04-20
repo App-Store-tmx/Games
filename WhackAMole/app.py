@@ -4,6 +4,7 @@ import random
 import os
 import json
 from tkinter import messagebox
+VERSION = "1.0.0"
 
 ctk.set_appearance_mode("dark")
 

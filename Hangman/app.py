@@ -2,6 +2,7 @@ import customtkinter as ctk
 import random
 import tkinter as tk
 from tkinter import messagebox
+VERSION = "1.0.0"
 
 class Hangman(ctk.CTk):
     def __init__(self):

@@ -3,6 +3,7 @@ import random
 from tkinter import messagebox
 import tkinter as tk
 import os
+VERSION = "1.0.0"
 
 class GuessTheNumber(ctk.CTk):
     def __init__(self):

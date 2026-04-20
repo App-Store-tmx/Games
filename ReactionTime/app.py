@@ -2,6 +2,7 @@ import customtkinter as ctk
 import time
 import random
 import tkinter as tk
+VERSION = "1.0.0"
 
 ctk.set_appearance_mode("dark")
 

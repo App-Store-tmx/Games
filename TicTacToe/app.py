@@ -4,6 +4,7 @@ import tkinter as tk
 import math
 import random
 import os
+VERSION = "1.0.0"
 
 class TicTacToe(ctk.CTk):
     def __init__(self):

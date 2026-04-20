@@ -3,6 +3,7 @@ import tkinter as tk
 import random
 from tkinter import messagebox
 import os
+VERSION = "1.0.0"
 
 class SnakeGame(ctk.CTk):
     def __init__(self):

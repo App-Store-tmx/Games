@@ -2,6 +2,7 @@ import customtkinter as ctk
 import random
 import tkinter as tk
 from collections import deque
+VERSION = "1.0.0"
 
 class RockPaperScissors(ctk.CTk):
     def __init__(self):

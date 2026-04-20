@@ -3,6 +3,7 @@ import random
 import time
 import tkinter as tk
 from tkinter import messagebox
+VERSION = "1.0.0"
 
 class MemoryMatch(ctk.CTk):
     def __init__(self):

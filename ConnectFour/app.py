@@ -3,6 +3,7 @@ import tkinter as tk
 from tkinter import messagebox
 import random
 import os
+VERSION = "1.0.0"
 
 ctk.set_appearance_mode("dark")
 
